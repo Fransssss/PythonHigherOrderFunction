@@ -1,6 +1,7 @@
 
 # =================
 # practice send function as argument in another function
+# observe function with higher order / called first
 # =================
 
 def loud(l_text):
