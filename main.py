@@ -4,11 +4,11 @@
 # =================
 
 def loud(l_text):
-    return l_text.upper()
+    return "\n[ " + l_text.upper() + " ]"
 
 
 def quiet(q_text):
-    return q_text.lower()
+    return "\n[ " + q_text.lower() + " ]"
 
 
 def the_text(a_function):               # after this is called, it is going to ask user for input / text
@@ -20,6 +20,7 @@ def the_text(a_function):               # after this is called, it is going to a
 print("\n== Say something... ==")
 print("1. LOUDLY")
 print("2. quietly")
+print("e. Exit")
 choice = input("choice: ").lower()       # make user input to lower case to make while-loop condition simpler
 
 while choice != 'e':
@@ -37,6 +38,7 @@ while choice != 'e':
     print("\n== Say something ==")
     print("1. Loudly")
     print("2. Quietly")
+    print("e. Exit")
     choice = input("choice: ").lower()
 
 print("\n== Exit Program ==")
