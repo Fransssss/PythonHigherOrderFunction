@@ -1,7 +1,6 @@
 
 # =================
 # practice send function as argument in another function
-# observe function with higher order / called first
 # =================
 
 def loud(l_text):
@@ -14,8 +13,12 @@ def quiet(q_text):
 
 def the_text(a_function):               # after this is called, it is going to ask user for input / text
     input_text = input("Enter a text: ").capitalize()
-    this_text = a_function(input_text)  # any function that user want the text to be displayed will be called here
-    return this_text
+    if input_text.isdigit():            # just to make sure user input is not digit
+        return "\n[ Invalid input - string only ]"
+
+    else:
+        this_text = a_function(input_text)  # any function that user want the text to be displayed will be called here
+        return this_text
 
 
 print("\n== Say something... ==")
